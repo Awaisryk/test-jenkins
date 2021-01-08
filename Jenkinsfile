@@ -1,8 +1,10 @@
 pipeline {
 	agent any
 	stages {
-		steps("sh hello world") {
-			sh label: '', script: 'echo "hello world"'
+		stage("sh hello world") {
+			steps {
+				sh label: '', script: 'echo "hello world"'
+			}
 		}
 	}
 }
